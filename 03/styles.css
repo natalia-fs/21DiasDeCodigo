@@ -1,0 +1,68 @@
+@import url('../globals/reset.css');
+
+body {
+  background:  #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#btn {
+  padding: 1rem;
+  color: #e5e5e5;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: #3d3d3d;
+  border: 1px solid;
+}
+
+#btn::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 10rem;
+  height: 4rem;
+  border: 1px solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .5s ease-out;
+  animation: rainbowAnimate .3s infinite;
+}
+
+#btn:hover::after{
+  opacity: 1;
+}
+
+@keyframes rainbowAnimate{
+  0% {
+    background: linear-gradient(45deg,
+    red, orange, yellow, green, blue, purple, pink);
+  }
+  16% {
+    background: linear-gradient(45deg,
+    yellow, green, blue, purple, pink, red, orange);
+  }
+  32% {
+    background: linear-gradient(45deg,
+    green, blue, purple, pink, red, orange, yellow);
+  }
+  48% {
+    background: linear-gradient(45deg,
+    blue, purple, pink, red, orange, yellow, green);
+  }
+  56% {
+    background: linear-gradient(45deg,
+    purple, pink, red, orange, yellow, green, blue);
+  }
+  72% {
+    background: linear-gradient(45deg,
+    pink, red, orange, yellow, green, blue, purple);
+  }
+  86% {
+    background: linear-gradient(45deg,
+    red, orange, yellow, green, blue, purple, pink);
+  }
+}
