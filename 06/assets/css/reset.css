@@ -1,0 +1,43 @@
+/* Reset CSS */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --fundo-escuro: #000;
+  --fundo-card: #1d2226aa;
+  --fundo-card-ativo: hsla(0, 0%, 100%, 0.12);
+  --texto-principal: hsla(0, 0%, 100%, 0.9);
+  --texto-secundario: hsla(0, 0%, 100%, 0.6);
+  --texto-escuro: hsla(0, 0%, 0%, 0.75);
+  --input: #38434F;
+  --primario: #70b5f9;
+  --positivo: #3ec786;
+}
+
+body, input, textarea, button{
+  font-family: 'Roboto', sans-serif;
+  color: var(--texto-principal);
+}
+
+button{
+  color: var(--texto-escuro);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.6rem;
+  padding: 6px 1rem;
+}
+
+@media(max-width: 1080px){
+  html{
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 720px){
+  html{
+    font-size: 87.5%; 
+  }
+}

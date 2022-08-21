@@ -1,0 +1,32 @@
+section.card.formacao{
+  padding: 1rem 1.6rem;
+  font-size: 1rem;
+}
+
+.instituicao{
+  display: flex;
+  margin-top: 8px;
+}
+
+.instituicao img{
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.instituicao>div{
+  display: flex;
+  flex-direction: column;
+}
+
+.instituicao>div h3{
+  font-size: 16px;
+  font-weight: 600;
+}
+.instituicao span{
+  font-size: 14px;
+}
+.instituicao .duracao{
+  color: var(--texto-secundario);
+}

@@ -1,0 +1,113 @@
+@import url('./reset.css');
+@import url('./secao-informacoes-perfil.css');
+@import url('./navbar.css');
+@import url('./destaques.css');
+@import url('./atividades.css');
+@import url('./sobre.css');
+@import url('./experiencias.css');
+@import url('./formacao.css');
+@import url('./idiomas.css');
+@import url('./sugestoes.css');
+
+a{
+  color: var(--primario);
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  background-color: #000c;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+body::before,
+body::after{
+  content: "";
+  width: 35rem;
+  height: 35rem;
+  position: absolute;
+  background: linear-gradient(0, var(--primario), blueviolet);
+  z-index: -1;
+  border-radius: 50%;
+  animation: shape 6s infinite alternate-reverse;
+}
+
+body::after{
+  width: 40rem;
+  height: 40rem;
+  right: 0;
+  bottom: 5%;
+  animation: shape 6s infinite alternate;
+}
+
+main > div{
+  display: flex;
+  flex-direction: column;
+}
+main > .perfil{
+  align-items: flex-end;
+  margin-right: 1.5rem;
+}
+
+main > .sugestoes{
+  align-items: flex-start;
+}
+main section.card{
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border: 1px solid #ffffff33;
+}
+.botao-primario{
+  background-color: var(--primario);
+}
+
+.botao-secundario{
+  background: transparent;
+  color: var(--primario);
+  border: 1px solid var(--primario);
+}
+
+@media(max-width: 1024px){
+  main{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main > .sugestoes, main > .perfil{
+    align-items: center;
+    margin-right: 0;
+  }
+}
+
+@keyframes shape {
+  33% { border-radius:  49% 79% 100% 59% / 74% 96% 55% 99%; }
+  66% { border-radius:  50%;}
+  100% { border-radius:  85% 48% 66% 65% / 74% 83% 74% 55%; }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--fundo-card)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0, var(--primario), blueviolet);
+  border-radius: 5px;
+}

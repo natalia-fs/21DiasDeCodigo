@@ -1,0 +1,135 @@
+section.navbar{
+  height: 52px;
+  background: var(--fundo-card);
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-around;
+
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+}
+
+.navbar-busca{
+  width: 370px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-logo-linkedin{
+  cursor: pointer;
+  background-image: url('../icones/logo-linkedin.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+}
+
+.navbar-busca-icone{
+  width: 24px;
+  height: 24px;
+  background-image: url('../icones/icone-busca.svg');
+  position: absolute;
+  left: 50px;
+}
+
+.navbar-input{
+  width: 280px;
+  height: 34px;
+  background: var(--input);
+  border: none;
+  border-radius: .3rem;
+  padding-left: 2.4rem;
+}
+
+.navbar-input::placeholder{
+  color: var(--texto-secundario);
+}
+
+.navbar nav{
+  display: flex;
+}
+
+.navbar-item{
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-item:last-child{
+  margin-left: .2rem;
+  border-left: 1px solid var(--texto-secundario);
+}
+
+.navbar-item a{
+  text-align: center;
+  width: 80px;
+  font-size: .8rem;
+  color: var(--texto-secundario);
+  transition: color .3s ease;
+}
+.navbar-item a:hover{
+  color: var(--texto-principal);
+}
+
+.item-icone{
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+span.inicio{
+  background-image: url('../icones/icone-inicio.svg');
+}
+span.minha-rede{
+  background-image: url('../icones/icone-minha-rede.svg');
+}
+span.vagas{
+  background-image: url('../icones/icone-vagas.svg');
+}
+span.mensagens{
+  background-image: url('../icones/icone-mensagens.svg');
+}
+span.notificacoes{
+  background-image: url('../icones/icone-notificacoes.svg');
+}
+span.solucoes{
+  background-image: url('../icones/icone-solucoes.svg');
+}
+
+@media(max-width: 1024px){
+  section.navbar{
+    padding: 0 4rem;
+  }
+
+  .navbar-input{
+    display: none;
+  }
+
+  .navbar-busca-icone{
+    transform: translate(100%, -20%);
+  }
+
+  .navbar-busca-icone::before{
+    content: "Pesquisar";
+    color: var(--texto-secundario);
+    font-size: .75rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-40%, 165%);
+  }
+
+  .navbar-busca-icone::before:hover{
+    color: var(--texto-principal);
+  }
+}
+
+@media(max-width: 680px){
+  .navbar-busca-icone{
+    display: none;
+  }
+}

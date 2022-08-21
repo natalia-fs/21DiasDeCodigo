@@ -1,0 +1,81 @@
+section.card.experiencias{
+  padding: 1rem 1.6rem;
+  font-size: 1rem;
+}
+
+.experiencia-item{
+  display: flex;
+  flex-direction: column;
+}
+
+.organizacao{
+  display: flex;
+  margin-top: 8px;
+}
+
+.organizacao img{
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+}
+
+.organizacao>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.organizacao>div>p{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.organizacao>div>span{
+  color: var(--texto-secundario);
+}
+
+li.cargo{
+  position: relative;
+  left: 54px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+li.cargo h3{
+  font-size: 16px;
+  font-weight: 600;
+}
+li.cargo span{
+  font-size: 14px;
+  color: var(--texto-secundario);
+}
+
+li.cargo .tipo-emprego{
+  color: var(--texto-principal);
+}
+
+li.cargo::before, li.cargo::after{
+  content: "";
+  position: absolute;
+  transform: translate(-35px, 50%);
+}
+
+li.cargo::before{
+  background-color: var(--texto-principal);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+li.cargo::after{
+  background-color: var(--texto-secundario);
+  left: 4px;
+  top: -5%;
+  width: 1px;
+  height: 48px;
+}
+
+li.cargo:not(:last-child){
+  margin-bottom: 8px;
+}
