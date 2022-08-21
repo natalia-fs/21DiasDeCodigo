@@ -1,0 +1,74 @@
+@import url('../globals/reset.css');
+
+html {
+  font-family: sans-serif;
+}
+
+body{
+  background: #141414;
+  color: #e5e5e5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+strong.not-found{
+  font-size: 8rem;
+  filter: drop-shadow(0 0 10px black);
+}
+
+.not-found-text{
+  font-size: 2rem;
+}
+
+.not-found-text span{
+  filter: drop-shadow(0 0 4px #fff);
+}
+
+section.background::before,
+section.background::after {
+  content: "";
+  position: absolute;
+  background: #ffffff22;
+  border-radius:  50%;
+  z-index: -1;
+}
+
+section.background::before {
+  width: 30rem;
+  height: 30rem;
+  right: 5%;
+  animation: shape 6s infinite alternate,
+    rotate 12s infinite linear;
+  transform-origin: 25% 20%;
+}
+section.background::after {
+  width: 45rem;
+  height: 45rem;
+  top: 0;
+  left: -5%;
+  transform: skew(15deg);
+  animation: shape 6s infinite alternate-reverse,
+    rotate 10s infinite linear reverse;
+  transform-origin: 35%;
+}
+
+@keyframes shape {
+  33% { border-radius:  49% 79% 100% 59% / 74% 96% 55% 99%; }
+  66% { border-radius:  50%;}
+  100% { border-radius:  85% 48% 66% 65% / 74% 83% 74% 55%; }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
