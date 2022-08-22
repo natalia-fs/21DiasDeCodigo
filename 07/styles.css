@@ -1,0 +1,62 @@
+@import url('../globals/reset.css');
+
+:root{
+  --preto-09: #141414;
+  --branco-05: #e5e5e5;
+  --transparente-05: #e5e5e577;
+  --azul-05: #1b79f3;
+  --violeta-05: #8a2be2;
+  --gradiente: linear-gradient(45deg, var(--violeta-05), var(--azul-05));
+}
+
+body{
+  background: var(--preto-09);
+  color: var(--branco-05);
+  font-family: sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button.btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  
+  background: var(--gradiente);
+  color: var(--branco-05);
+
+  border-radius: .5rem;
+  border: 1px solid var(--branco-05);
+}
+
+.btn:disabled{
+  cursor: not-allowed;
+  filter: brightness(.5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 16rem;
+  padding: 1rem;
+  border: 1px solid var(--transparente-05);
+  border-radius: .5rem;
+  background: #ffffff10;
+}
+
+#digitos {
+  font-size: 8rem;
+  font-weight: bold;
+  
+  /* Gradiente */
+  background-image: var(--gradiente);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+}
