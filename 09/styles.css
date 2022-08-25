@@ -1,0 +1,67 @@
+@import url('../globals/reset.css');
+
+:root{
+  --color: #2bff00;
+}
+
+.container {
+  background: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  animation: background 2s linear infinite alternate;
+}
+
+@keyframes background{
+  0% {filter: hue-rotate(0)}
+  100% {filter: hue-rotate(360deg)}
+}
+
+.loading-text{
+  color: var(--color);
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.loader{
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.loader span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(24deg * var(--element)));
+}
+
+.loader span::before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 0 10px var(--color),
+              0 0 20px var(--color),
+              0 0 40px var(--color),
+              0 0 60px var(--color),
+              0 0 80px var(--color),
+              0 0 100px var(--color)
+  ;
+  animation: loader 1.8s linear infinite;
+  animation-delay: calc(0.12s * var(--element));
+}
+
+@keyframes loader {
+  0% { transform: scale(1);}
+  90%, 100% { transform: scale(0);}
+}
