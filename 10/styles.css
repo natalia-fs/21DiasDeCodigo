@@ -1,0 +1,66 @@
+@import url('../globals/reset.css');
+
+body{
+  background: #141414;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/mindflayer.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(.75);
+  opacity: 0;
+}
+
+div#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.card{
+  position: absolute;
+  font-family: sans-serif;
+  border: 1px solid #80808055;
+  background: #ffffff35;
+  padding: 2rem;
+  border-radius: .5rem;
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  z-index: 3;
+}
+.card h1{
+  font-size: 3rem;
+  color: #e5e5e5;
+}
+.flash::before{
+  animation: flash ease-out 6s infinite;
+}
+
+@keyframes flash {
+	from { opacity: 0; } 
+    90% { opacity: 0; }
+	  91% { opacity: .6; }
+    92% { opacity: .2; }
+    96% { opacity: 1; } 
+	to { opacity: 0; }
+}
