@@ -3,6 +3,10 @@
 body{
   background: #141414;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .carousel{
@@ -11,7 +15,7 @@ body{
 }
 
 .carousel-cell{
-  width: 33%;
+  width: 50%;
   height: 400px;
   margin-right: 10px;
   background: #252525;
@@ -57,4 +61,10 @@ body{
 .card .card__content span{
   text-align: justify;
   margin-right: 0.5rem;
+}
+
+@media screen and ( max-width: 960px ) {
+  .carousel-cell{
+    width: 80%;
+  }
 }
