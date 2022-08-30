@@ -1,0 +1,90 @@
+@import url('../globals/reset.css');
+
+html{
+  font-family: sans-serif;
+}
+
+main{
+  padding: 1.5rem;
+}
+
+main p{
+  text-align: justify;
+}
+
+nav {
+  background: #202020;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+ul.menu{
+  transition: 1s ease;
+}
+ul.menu .item{
+  cursor: pointer;
+  display: inline;
+  color: #e5e5e5;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: .75rem .5rem;
+
+  transition: .3s ease;
+}
+
+ul.menu .item:hover{
+  background: blueviolet;
+  border-radius: .75rem;
+}
+
+ul.menu .item + .item{
+  margin-left: .5rem;
+}
+
+button {
+  display: none;
+  background: transparent;
+  padding: .75rem;
+  height: 4rem;
+}
+
+.menu-icon{
+  color: #e5e5e5;
+  transition: 3s ease filter;
+}
+
+.menu-icon:hover{
+  filter: brightness(.85);
+}
+
+@media screen and (max-width: 540px){
+  ul.menu .item:not(:first-child){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px){
+
+  ul.menu.mobile{
+    position: relative;
+  }
+
+  ul.menu.mobile .item{
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: .5rem 0;
+  }
+  ul.menu .item + .item{
+    margin-left: 0;
+  }
+  button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+  }
+}

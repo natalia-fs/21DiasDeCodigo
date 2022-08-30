@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="menu" class="menu">
+          <li href="#" class="item active">Início</li>
+
+          <li href="#" class="item">Produtos</li>
+
+          <li href="#" class="item">Contato</li>
+
+          <li href="#" class="item">Sobre</li>
+        </ul>
+
+        <button onclick="menu()">
+          <i class="menu-icon" data-feather="menu"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque odio
+        laudantium mollitia saepe veritatis perferendis assumenda? Animi minima
+        beatae, at qui repudiandae cumque ab, quibusdam voluptatem deleniti
+        veniam a nesciunt? Pokem ipsum dolor sit amet Onix Yanma Blissey Gligar
+        Escape Rope Zorua. Teleport Fighting Celadon Department Store Beldum
+        Abra Stunfisk Flying. Poison Porygon Normal Poison Hitmontop Sandslash
+        Keldeo. Blue Sewaddle Swoobat Landorus Gary Spheal Darumaka. Squirtle
+        Quilava Simisage Leech Life Pokemon Fan Club Chairman Pawniard Clefairy.
+        Ivysaur Zorua Vanillite Professor Oak Sceptile Jirachi Mawile. Slash
+        Totodile Dugtrio Yanma Mewtwo Strikes Back Sapphire Serperior. Leaf
+        Green Suicune Golbat Zorua Alakazam Gligar Wartortle. Mirror Move Pallet
+        Town Lugia Marshtomp Heatmor Yellow Azumarill. Sand-Attack Kirlia
+        Dragonite grumpy old man who needs coffee Red Glaceon incididunt ut
+        labore.
+      </p>
+    </main>
+
+    <script>
+      feather.replace();
+
+      function menu() {
+        const menu = document.getElementById("menu");
+        if (!menu.classList.contains("mobile"))
+          menu.classList.add("mobile");
+        else
+          menu.classList.remove("mobile");
+      }
+    </script>
+  </body>
+</html>
