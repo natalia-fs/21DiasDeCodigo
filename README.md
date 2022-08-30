@@ -6,4 +6,10 @@
 - Dia 4: Calculadora
 - Dia 5: Página de erro 404
 - Dia 6: Efeito glassmorphism
-- Dia 7: 
+- Dia 7: Contador (Temporizador)
+
+- Dia 8: Contador (Temporizador)
+- Dia 9: Animação de carregamento
+- Dia 10: Usando Particles.js
+- Dia 11: Formulário simples de login
+- Dia 12: Galeria de cards com imagens
