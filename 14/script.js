@@ -81,5 +81,21 @@ const questions = [
       { text: 'Vue', correct: false },
       { text: 'Depende', correct: true },
     ]
+  },
+  {
+    question: 'No Javascript, quanto é "5" + 5?',
+    answers: [
+      { text: '10', correct: false },
+      { text: '55', correct: true },
+      { text: '5', correct: false },
+    ]
+  },
+  {
+    question: 'Qual horário inicial da live do Marmitech?',
+    answers: [
+      { text: 'Meio dia', correct: true },
+      { text: 'Meia noite', correct: false },
+      { text: '18:00', correct: false },
+    ]
   }
 ]
