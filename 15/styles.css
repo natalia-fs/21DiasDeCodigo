@@ -6,6 +6,8 @@
   --white-01: #fff;
   --green-01: #51cd32;
   --green-02: #2c7e17;
+  --gray-01: #d3d3d3;
+  --gray-02: #d3d3d360;
 }
 
 html{
@@ -57,5 +59,28 @@ main{
 .produto{
   width: 200px;
   height: 250px;
-  border: 1px solid;
+  border: 1px solid var(--gray-02);
+  border-radius: .5rem;
+  background: var(--white-01);
+  transition: .3s ease;
+}
+
+.produto:hover{
+  filter: drop-shadow(0px 2px 2px var(--gray-01));
+}
+
+.produto img{
+  width: 182px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0.5rem;
+  border-radius: .25rem;
+}
+
+.produto-nome, .produto-preco{
+  margin-left: 0.5rem;
+}
+
+.produto-nome{
+  font-weight: bold;
 }
