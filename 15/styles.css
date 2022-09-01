@@ -1,0 +1,61 @@
+@import url('../globals/reset.css');
+
+:root{
+  --blue-01: #24abe0;
+  --blue-02: #24abe065;
+  --white-01: #fff;
+  --green-01: #51cd32;
+  --green-02: #2c7e17;
+}
+
+html{
+  font-family: sans-serif;
+}
+
+header {
+  background: var(--blue-01);
+  color: var(--white-01);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  height: 5rem;
+}
+
+header nav a{
+  color: var(--white-01);
+  text-decoration: none;
+  font-weight: bold;
+  transition: .25s ease;
+}
+
+header nav a + a{
+  margin-left: 1rem;
+}
+
+#carrinho{
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+header nav a:hover, #carrinho:hover{
+  filter: brightness(.9);
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 5rem);
+}
+.produtos-container{
+  width: 700px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.produto{
+  width: 200px;
+  height: 250px;
+  border: 1px solid;
+}
