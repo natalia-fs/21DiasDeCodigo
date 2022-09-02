@@ -1,0 +1,85 @@
+@import url('../globals/reset.css');
+
+
+
+html{
+  font-family: sans-serif;
+}
+
+body {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+.card{
+  background: #f5f5f5;
+}
+.profile{
+  width: 100%;
+  display: flex;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 2px solid #d3d3d3;
+  border-radius: .75rem;
+}
+
+.profile img{
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e5e5e5;
+  margin-right: 1.5rem;
+}
+
+.profile p{
+  margin: 1rem .5rem;
+  text-align: justify;
+}
+
+.repos{
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 2px solid #d3d3d3;
+  border-radius: .75rem;
+}
+
+.repo__item{
+  margin: 1rem;
+  margin-left: 0;
+  padding: 1rem;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #d3d3d3;
+  border-radius: .5rem;
+}
+
+.repo__infos{
+  display: flex;
+  margin-top: 1rem;
+}
+
+.repo__infos span {
+  display: flex;
+  align-items: center;
+}
+.repo__infos .stars{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.repo__infos .stars > svg{
+  height: 1rem;
+  margin-right: .5rem;
+}
+
+.repo__infos span + span{
+  display: flex;
+  margin-left: 1rem;
+}

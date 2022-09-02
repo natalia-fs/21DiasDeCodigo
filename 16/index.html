@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+      <div v-if="user" class="profile card">
+        <img :src="user != null ? user.avatar_url : ''" alt="">
+        <div class="profile__infos">
+          <h1>{{user.name}}</h1>
+          <p>{{user.bio}}</p>
+        </div>
+      </div>
+
+      <div class="repos card">
+        <h2>Repositórios mais recentes</h2>
+        <div class="repos__grid">
+          <a
+            v-if="repos.length"
+            class="repo__item"
+            v-for="(repo, index) in repos"
+            :key="index"
+            :href="repo.html_url"
+            target="_blank"
+          >
+            <strong>
+              {{repo.name}}
+            </strong>
+            <div class="repo__infos">
+              <span class="language" v-if="repo.language">{{repo.language}}</span>
+              <span class="stars">
+                <i class="icon" data-feather="star"></i>
+                <span> {{repo.stargazers_count}}</span>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      feather.replace()
+      const { createApp } = Vue
+    
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vue!',
+            repos: [],
+            user: null,
+            username: 'natalia-fs'
+          }
+        },
+        async created(){
+          let [repositories, user] = await Promise.all([
+            await fetch(
+              this.baseUrl+`users/${this.username}/repos`
+            ).then(response => {
+              return response.json();
+            }),
+            await fetch(
+              this.baseUrl+`users/${this.username}`
+            ).then(response => {
+              return response.json();
+            }),
+          ]);
+          this.user = user;
+          this.repos = repositories;
+          console.log(repositories, user);
+        },
+        computed: {
+          baseUrl(){
+            return 'https://api.github.com/'
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>
