@@ -12,6 +12,20 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <div id="app">
+      <div class="user">
+        <input
+          v-model="username"
+          type="text"
+          placeholder="Digite um nome de usuário válido do Github"
+        />
+        <button
+          class="search"
+          @click="atualizarDados()"
+          title="Atualizar user"
+        >
+          <i class="icon" data-feather="search"></i>
+        </button>
+      </div>
       <div v-if="user" class="profile card">
         <img :src="user != null ? user.avatar_url : ''" alt="">
         <div class="profile__infos">
@@ -53,14 +67,22 @@
       createApp({
         data() {
           return {
-            message: 'Hello Vue!',
             repos: [],
             user: null,
             username: 'natalia-fs'
           }
         },
-        async created(){
-          let [repositories, user] = await Promise.all([
+        created(){
+          this.atualizarDados();
+        },
+        computed: {
+          baseUrl(){
+            return 'https://api.github.com/'
+          }
+        },
+        methods: {
+          async atualizarDados(){
+            let [repositories, user] = await Promise.all([
             await fetch(
               this.baseUrl+`users/${this.username}/repos`
             ).then(response => {
@@ -74,13 +96,8 @@
           ]);
           this.user = user;
           this.repos = repositories;
-          console.log(repositories, user);
-        },
-        computed: {
-          baseUrl(){
-            return 'https://api.github.com/'
           }
-        }
+        },
       }).mount('#app')
     </script>
   </body>
