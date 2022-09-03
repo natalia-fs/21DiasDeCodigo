@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de senhas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tippy.js@6/animations/scale.css"
+  />
+</head>
+<body>
+  <main>
+    <h1>
+      Gerador de senhas
+      <span id="random"> aleatórias</span>
+    </h1>
+    
+    <div id="password"></div>
+    <button
+      class="btn generate"
+      onclick="generateNewPassword()"
+    >
+      GERAR ALEATORIAMENTE
+    </button>
+    
+    <button
+      class="btn copy"
+      onclick="copyToClipboard()"
+    >
+      Copiar para área de transferência
+    </button>
+  </main>
+
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    tippy('#random', {
+      content: 'pseudo-aleatórias 😅',
+    });
+    const passwordElement = document.getElementById('password');
+    let password = '';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-*._#@!'
+    const PASSWORD_LENGTH = 8;
+    function generateNewPassword(){
+      password = '';
+      for(i = 0; i < PASSWORD_LENGTH; i++){
+        password += chars[Math.floor(Math.random() * chars.length)]
+      }
+      passwordElement.innerHTML = password;
+    }
+
+    function copyToClipboard(){
+      navigator.clipboard.writeText(
+        passwordElement.innerText
+      );
+      swal("Copiado para a área de transferência!", {
+        button: false,
+      });
+    }
+    
+  </script>
+</body>
+</html>

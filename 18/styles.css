@@ -1,0 +1,41 @@
+@import url('../globals/reset.css');
+
+html {
+  font-family: sans-serif;
+  --gradient: linear-gradient(45deg, blueviolet, blue);
+  color: #e5e5e5;
+  background: var(--gradient);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#password{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 6rem;
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+}
+
+button.btn{
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: .5rem;
+  border: 1px solid;
+}
+
+button.btn.generate{
+  background: #141414;
+  color: #e5e5e5;
+  border: 1px solid;
+  margin-bottom: 1rem;
+}
