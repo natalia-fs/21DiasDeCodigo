@@ -1,0 +1,42 @@
+@import url('../globals/reset.css');
+
+html {
+  font-family: sans-serif;
+  --gradient: linear-gradient(45deg, blueviolet, blue);
+  color: #e5e5e5;
+  background: var(--gradient);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main>strong {
+  font-size: 2.75rem;
+}
+
+#selected-key{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 5rem;
+  padding: .5rem;
+  text-align: center;
+  background: #e5e5e5;
+  color: blue;
+  font-size: 2rem;
+  margin-top: 3rem;
+  border-radius: .5rem;
+  filter: drop-shadow(0 0 5px #000000aa);
+}
