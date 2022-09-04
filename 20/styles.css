@@ -1,0 +1,52 @@
+@import url('../globals/reset.css');
+
+body{
+  font-family: sans-serif;
+  color: #e5e5e5;
+  height: 100vh;
+  overflow: hidden;
+  background: #141414;
+}
+
+main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+main h2{
+  margin-bottom: 1rem;
+}
+
+main input{
+  width: 100%;
+  height: 3rem;
+  margin: 1rem 0;
+  background: #222;
+  border: 2px solid gray;
+  border-radius: .5rem;
+  caret-color: #e5e5e5;
+  padding-left: .75rem;
+  transform: scale(1.1);
+}
+
+main input::placeholder{
+  color: gray;
+}
+
+.emoji-container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+span.emoji-item{
+  background: #222;
+  border: 1px solid;
+  border-radius: .5rem;
+  cursor: pointer;
+  font-size: 4rem;
+  margin: .25rem;
+}

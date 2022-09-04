@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+  <div id="app">
+    <main>
+      <h2>Selecione um emoji para copiar</h2>
+      <input
+        type="text"
+        placeholder="Cole seu emoji aqui 😉"
+      >
+      <div class="emoji-container">
+        <span
+          v-for="(emoji, key) in emojiList"
+          :key="key"
+          class="emoji-item"
+          @click="copyToClipboard(emoji)"
+        >{{emoji}}</span>
+      </div>
+    </main>
+
+  </div>
+      
+  <script>
+    const { createApp } = Vue
+  
+    createApp({
+      data() {
+        return {
+          emojiList: [
+            '😀', '😁', '😂', '🤣', '😄', '😅',
+            '😉', '😊', '😋', '😎', '😍', '😘',
+            '🥰', '😗', '😙', '🙂', '🤩', '🤔',
+            '😰', '😑', '😶', '🙄', '😣', '😥',
+            '😮', '🤐', '😪', '😫', '😴', '🙃',
+            '😜', '😒', '😔', '🙁', '😠', '😱',
+            '🤑', '🤡', '😬', '😇', '🤕', '🤢',
+            '🥵', '🥶', '😳', '🤠', '🤫', '😲'
+          ],
+        }
+      },
+      created(){
+        console.log('created')
+      },
+      methods: {
+        copyToClipboard(emoji){
+          navigator.clipboard.writeText(emoji);
+          swal("Copiado para a área de transferência!", {
+            button: false,
+            icon: "success",
+            timer: 1500
+          });
+        }
+      },
+    }).mount('#app')
+  </script>
+</body>
+</html>
