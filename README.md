@@ -39,9 +39,8 @@ Me chamo Natália, sou desenvolvedora front-end em constante evolução (com exp
 - Dia 2: [Hello world 3D](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/02)
   - Reel: [https://www.instagram.com/p/ChYSHJgD54j/](https://www.instagram.com/p/ChYSHJgD54j/)
 - Dia 3: [Botão animado (hover)](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/03)
-  - Reel:h[ttps://www.instagram.com/p/ChbF9r4D2gH/
-](ttps://www.instagram.com/p/ChbF9r4D2gH/
-)- Dia 4: [Calculadora](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/04)
+  - Reel: [https://www.instagram.com/p/ChbF9r4D2gH/](ttps://www.instagram.com/p/ChbF9r4D2gH/)
+- Dia 4: [Calculadora](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/04)
   - Reel: [https://www.instagram.com/p/ChdqYTqDAYy/](https://www.instagram.com/p/ChdqYTqDAYy/)
 - Dia 5: [Página de erro 404 (com fundo animado)](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/05)
   - Reel: [https://www.instagram.com/p/ChgEtAwjDjE/](https://www.instagram.com/p/ChgEtAwjDjE/)
