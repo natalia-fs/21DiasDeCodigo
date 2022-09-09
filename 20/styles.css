@@ -22,7 +22,7 @@ main h2{
 }
 
 main input{
-  width: 100%;
+  width: 90%;
   height: 3rem;
   margin: 1rem 0;
   background: #222;
@@ -30,7 +30,6 @@ main input{
   border-radius: .5rem;
   caret-color: #e5e5e5;
   padding-left: .75rem;
-  transform: scale(1.1);
 }
 
 main input::placeholder{
