@@ -41,7 +41,7 @@ Me chamo Natália, sou desenvolvedora front-end em constante evolução (com exp
   - Reel: [https://www.instagram.com/p/ChYSHJgD54j/](https://www.instagram.com/p/ChYSHJgD54j/)
 - Dia 3: [Botão animado (hover)](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/03)
   - [Resutlado](https://natalia-fs.github.io/21DiasDeCodigo/03)
-  - Reel: [https://www.instagram.com/p/ChbF9r4D2gH/](ttps://www.instagram.com/p/ChbF9r4D2gH/)
+  - Reel: [https://www.instagram.com/p/ChbF9r4D2gH/](https://www.instagram.com/p/ChbF9r4D2gH/)
 - Dia 4: [Calculadora](https://github.com/natalia-fs/21DiasDeCodigo/tree/main/04)
   - [Resutlado](https://natalia-fs.github.io/21DiasDeCodigo/04)
   - Reel: [https://www.instagram.com/p/ChdqYTqDAYy/](https://www.instagram.com/p/ChdqYTqDAYy/)
